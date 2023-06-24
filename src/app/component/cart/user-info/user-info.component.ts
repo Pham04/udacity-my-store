@@ -19,7 +19,10 @@ export class UserInfoComponent implements OnInit {
     })
   }
   onCheckout() {
-    this.userInfo.emit(this.createForm.value)
+    this.createForm.value.firstName.length >= 4 &&
+      this.createForm.value.address &&
+      this.createForm.value.creditCard &&
+      this.userInfo.emit(this.createForm.value)
   }
 
   get firstName() {
