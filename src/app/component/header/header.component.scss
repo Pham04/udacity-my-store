@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+    align-items: center;
+    background-color: #02b6e8;
+    padding:0px 5rem 0px 5rem;
+    height: 6rem;
+    position: sticky;
+    color: black;
+    &__title {
+        text-align: left;
+        font-size: 2rem;
+        font-weight: 700;
+        color: black;
+    }
+    &__menu {
+        text-align: center;
+        margin-right: 10px;
+    }
+    a:first-child {
+        text-align: center;
+        padding: 0 10px;
+        margin-right: 5px;
+        color: #ffffff;
+        text-decoration: none;
+        border-right: 1px solid #ffffff;
+    }
+    a:nth-child(2) {
+        text-align: center;
+        padding: 10px;
+        color: #ffffff;
+        text-decoration: none;
+        i {
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+        .product-item {
+            display: flex;
+            align-items: center;
+            &__image {
+                object-fit: cover;
+                width: 25rem;
+                border-radius: 20px;
+                height: 25rem;
+                margin-left: 10rem;
+                margin-top: 2rem;
+                box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            }
+            &__info {
+                padding: 10rem;
+                select {
+                    border-radius: 5px;
+                    width: 10rem;
+                    padding: 4px;
+                }
+                button {
+                    width: 10rem;
+                    background-color: #2f557a;
+                    border: 2px solid #5d404f !important;
+                    padding: 5px;
+                    color: #ffffff;
+                    border-radius: 5px;
+                }
+            }
+        }

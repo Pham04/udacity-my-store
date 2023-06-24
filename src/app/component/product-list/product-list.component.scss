@@ -1,0 +1,8 @@
+.productsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 1;
+    gap: 1rem;
+    justify-content: space-between;
+}

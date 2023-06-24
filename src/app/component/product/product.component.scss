@@ -1,0 +1,36 @@
+.product__item {
+    margin: 2rem 1rem;
+    .product-image {
+        object-fit: cover;
+        width: 20rem;
+        height:20rem;
+        margin: auto;
+        display: block;
+        border: 2px solid #04bcee;
+        padding: 15px;
+        box-shadow: rgba(126, 67, 150, 0.2) 0px 6px 19px 2px;
+        border-radius: 5px;
+    }
+    .product-detail {
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    select {
+        width: 10rem;
+        padding: 4px;
+        border-radius: 5px;
+        margin: auto;
+        display: block;
+        margin-bottom: 5px;
+    }
+    button {
+        margin: auto;
+        width: 10rem;
+        background-color: #2f557a;
+        border: 2px solid #5d404f !important;
+        padding: 5px;
+        color: #ffffff;
+        border-radius: 5px;
+        display: block;
+    }
+}

@@ -1,0 +1,54 @@
+<div>
+    <form class="form-group" [formGroup]="createForm" (ngSubmit)="onCheckout()">
+        <div>
+            <label>Full Name </label><br />
+            <input class="form-control" type="text" formControlName="firstName" placeholder="Enter First Name" required [ngClass]="{
+          'is-invalid': submitted && firstName?.touched && firstName?.errors
+        }" />
+
+            <div *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)" class="alert alert-danger mt-2">
+                <div *ngIf="firstName?.errors?.['required']">
+                    Please give me your firstName.
+                </div>
+                <div *ngIf="firstName?.errors?.['minlength']">
+                    Required 4 or more characters.
+                </div>
+
+                <div *ngIf="firstName?.errors?.['minlength']">
+                    Required 4 or more characters.
+                </div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <label>Address </label><br />
+            <input class="form-control" type="text" formControlName="address" placeholder="Enter Address" [ngClass]="{
+          'is-invalid': submitted && address?.touched && address?.errors
+        }" />
+            <div *ngIf="address?.invalid && (address?.dirty || address?.touched)" class="alert alert-danger mt-2">
+                <div *ngIf="address?.errors?.['required']">Please give me your address.</div>
+            </div>
+        </div>
+
+        <br />
+        <div>
+            <label>Credit Card Number </label><br />
+            <input class="form-control" type="number" formControlName="creditCard" maxlength="16" placeholder="Card number" [ngClass]="{
+          'is-invalid': submitted && creditCard?.touched && creditCard?.errors
+        }" />
+
+            <div *ngIf="
+          creditCard?.invalid && (creditCard?.dirty || creditCard?.touched)
+        " class="alert alert-danger mt-2">
+                <div *ngIf="creditCard?.errors?.['required']">
+                    Please give me your Credit Card number.
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <span class="message">Your information is private
+    </span>
+        <button type="submit" class="btn btn-primary">Checkout</button>
+    </form>
+</div>
